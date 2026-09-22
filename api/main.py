@@ -1,12 +1,11 @@
 import json
 
 from fastapi import FastAPI
-from fastapi.params import Query
 from fastapi.responses import JSONResponse
 
 app = FastAPI(title="Mock API")
 
-with open("books.json", "r", encoding="utf-8") as f:
+with open("api/books.json", "r", encoding="utf-8") as f:
     books_data = json.load(f)
 
 
